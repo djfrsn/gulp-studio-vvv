@@ -9,7 +9,7 @@ Studi˚ v0.1.2 is currently undergoing real world test to see what is needed and
 
 ## Quickstart
 
-1. Download Studi˚-vvv
+I. Download Studi˚-vvv
 
 Git:
 
@@ -18,27 +18,27 @@ mkdir studio && cd studio && git clone https://github.com/djfrsn/gulp-studio-vvv
 ```
 Future Option: [Slush-Studio](https://github.com/djfrsn/slush-studio)
 
-2. Install dependencies
+II. Install dependencies
 
 ```sh
 npm install
 ```
 
-3. Install [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV). Once installed clone a VVV project into your '/studio/' dir using:
+III. Install [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV). Once installed clone a VVV project into your '/studio/' dir using:
 
 ```sh
 gulp vvv
 ```
 
-4. Install [Alison Barrett's VVV Site Wizard](https://github.com/aliso/vvv-site-wizard). The rest of this guide assumes you installed VVV Site Wizard to run from anywhere, otherwise you will need to define the path in the next step.
+IV. Install [Alison Barrett's VVV Site Wizard](https://github.com/aliso/vvv-site-wizard). The rest of this guide assumes you installed VVV Site Wizard to run from anywhere, otherwise you will need to define the path in the next step.
 
-5. From your '~/vagrant-local/' dir create sites using:
+V. From your '~/vagrant-local/' dir create sites using:
 
 ```sh
 vvv -a create -n studio -d studio.dev -v 3.9.1 -x
 ```
 
-6. Run Studi˚ once your site is created
+VI. Run Studi˚ once your site is created
 
 ```sh
 gulp
@@ -149,7 +149,7 @@ var gulp = require('gulp');
 gulp.task('newTask', function () {
 
     return gulp.src(sourced.app)
-    	// do something here
+        // do something here
     	.pipe(gulp.dest(dist.dir));
 });  
 ```
