@@ -1,6 +1,6 @@
 ## Studi˚
 
-[Prototype Gulp task runner for use with VVV](http://studio.dennisjefferson.com) mainly concerned with SASS, Browser-Sync, VVV, HTML includes & file minfication. 
+[Prototype Gulp task runner for use with VVV](http://studio.dennisjefferson.com) mainly concerned with SASS, Browser-Sync, VVV, & file minfication. 
 
 #### Status
 
@@ -24,22 +24,21 @@ Future Option: [Slush-Studio](https://github.com/djfrsn/slush-studio)
 npm install
 ```
 
-3. Install [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV) then clone a VVV project into your '/studio/' dir w/:
+3. Install [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV). Once installed clone a VVV project into your '/studio/' dir using:
 
 ```sh
 gulp vvv
 ```
 
-4. Install [Alison Barrett's VVV Site Wizard](https://github.com/aliso/vvv-site-wizard) 
-The rest of this guide assumes you installed VVV Site Wizard to run from anywhere, otherwise you will need to define the path in the next step.
+4. Install [Alison Barrett's VVV Site Wizard](https://github.com/aliso/vvv-site-wizard). The rest of this guide assumes you installed VVV Site Wizard to run from anywhere, otherwise you will need to define the path in the next step.
 
-4. From your '~/vagrant-local/' dir create sites using:
+5. From your '~/vagrant-local/' dir create sites using:
 
 ```sh
 vvv -a create -n studio -d studio.dev -v 3.9.1 -x
 ```
 
-5. Run
+6. Run Studi˚ once your site is created
 
 ```sh
 gulp
