@@ -14,9 +14,9 @@ gulp.task('test-app', function(callback) {
 });
 
 gulp.task('test-build', function(callback) {
-		runSequence( 'clean', 'build-styles', 'compile-critical',
+		runSequence( 'clean', 'build-styles',
 	      [ 'brush', 'dist-font' ],
-	      'uglify-js', 'inline-critical', 
+	      'uglify-js',
 	      [ 'build-img', 'build-brush' ],
 	      'buildstudioMsg',
 	      callback);
