@@ -1,4 +1,4 @@
-// Task Template
+// Create site w/ VVV-Site-Wizard
 var gulp = require('gulp'),
 	prompt = require('gulp-prompt'),
 	shell = require('gulp-shell');
