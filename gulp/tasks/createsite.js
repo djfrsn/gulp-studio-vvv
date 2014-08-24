@@ -3,50 +3,25 @@ var gulp = require('gulp'),
 	prompt = require('gulp-prompt'),
 	shell = require('gulp-shell');
 
-gulp.task('siteName', function(){
+var response = 'response';
 
-    return gulp.src(sourced.app)
-        .pipe(prompt.prompt([
-            {
-                type: 'input',
-                name: 'userInput',
-                message: 'What is the name of your site?'
-            }
-        ], function(res){
-            response = res.userInput;
-        }));
-});
-
-	
-
-gulp.task('v', ['siteName'], shell.task([
-	vtask = gulp + '' + response;
-        vtask
-]));
-
-gulp.task('v', ['v', 'siteName'],function(callback) {
-		runSequence( 'siteName', 'v',
-	      callback);
-});
-
-
-var myVar = 'MONKEY';
-
-gulp.task('userinput1', function(){
+gulp.task('vvv-site-wizard', function(){
 
     return gulp.src(sourced.app, {read: false})
         .pipe(prompt.prompt([
             {
                 type: 'input',
                 name: 'userInput',
-                message: 'Say something'
+                message: 'What is the name of your site(ex: studio.dev)'
             }
         ], function(res){
-            myVar = res.userInput;
+            response = res.userInput;
         }));
 });
 
-gulp.task('userinput', ['userinput1'], function() {
+gulp.task('createsite', ['vvv-site-wizard'], function() {
     return gulp.src(sourced.app)
-        .pipe(prompt.confirm('You said ' + myVar));
+        .pipe(shell([
+      'cd vvv/vagrant-local/ && vvv -a create -n ' + response + '-d ' + response + '-v 3.9.1 -x'
+    ]))
 });
