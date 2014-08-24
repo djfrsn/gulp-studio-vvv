@@ -32,20 +32,23 @@ gulp vvv
 
 IV. Install [Alison Barrett's VVV Site Wizard](https://github.com/aliso/vvv-site-wizard). The rest of this guide assumes you installed VVV Site Wizard to run from anywhere, otherwise you will need to define the path in the next step.
 
-V. From your '~/vagrant-local/' dir create sites using:
+V. Create your site using:
 
 ```sh
-vvv -a create -n studio -d studio.dev -v 3.9.1 -x
+gulp createsite
 ```
+The name chosen will be the url served to the browser
 
-VI. Run Studi˚ once your site is created
+VI. Update the proxy in 'gulp/task/browsersync.js' to your chosen site name 
+
+VII. Run Studi˚ once your site is created
 
 ```sh
 gulp
 ```
-This compiles Studi˚ & launches browser-sync w/ 'local.wordpress.dev' as the default proxy. Vivy!
+This compiles Studi˚ & launches browser-sync w/ 'yoursite.dev' as the default proxy. Vivy!
 
-Head to '~/vagrant-local/www/studio' & start building!  
+Head to '~/vagrant-local/www/yoursite.dev' & start building!  
 
 Try running 
 
