@@ -8,31 +8,31 @@ var fs = require('fs');
 		root: './'
 	}
 	sourced = {
-		app: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/',
-		php: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/**/**/*.php',
-		font: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/lib/fonts/**/*',
-		img: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/images/**/*',
-		sass: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/**/*.scss',
-		css: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/paint.css',
-		criticalSASS: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/critical/**/*.scss',
-		criticalCSS: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/critical/critical.css',
-		criticaldir: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/critical/',
-		styles: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/',
-		brush: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/js/brush/brush.js',
-		brushdir: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/js/brush/', 
-		jsdir: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/js/brush/**/*.js',
-		jslib: [ 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/js/brush/vendor/*.js', 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/js/brush/components/component.js' ], // js is concatenated from left to right 
-		ignoreSASS: '!vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/**/*.scss',
-		ignoreCritCSS: '!vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/critical/*.css',
-		ignoreCritSASS: '!vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/critical/**/*.scss'
+		app: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/',
+		php: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/**/**/*.php',
+		font: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/lib/fonts/**/*',
+		img: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/images/**/*',
+		sass: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/scss/**/*.scss',
+		css: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/scss/paint.css',
+		criticalSASS: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/scss/critical/**/*.scss',
+		criticalCSS: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/scss/critical/critical.css',
+		criticaldir: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/scss/critical/',
+		styles: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/',
+		brush: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/js/brush/brush.js',
+		brushdir: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/js/brush/', 
+		jsdir: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/js/brush/**/*.js',
+		jslib: [ 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/js/brush/vendor/*.js', 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/js/brush/components/component.js' ], // js is concatenated from left to right 
+		ignoreSASS: '!vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/scss/**/*.scss',
+		ignoreCritCSS: '!vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/scss/critical/*.css',
+		ignoreCritSASS: '!vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/scss/critical/**/*.scss'
 	};
 	dist = {
-		styles: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/css/styles/',
-		js: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/js/brush/',
-		font: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/lib/fonts/',
-		img: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/images/',
-		aux: [ 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/humans.txt', 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/robots.txt', 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/favicon.ico' ],
-		dir: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/twentyfourteen/'
+		styles: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/',
+		js: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/js/brush/',
+		font: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/lib/fonts/',
+		img: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/images/',
+		aux: [ 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/humans.txt', 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/robots.txt', 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/favicon.ico' ],
+		dir: 'vvv/vagrant-local/www/studio/htdocs/wp-content/themes/studio/'
 	};
 
 tasks.forEach(function(task) {
