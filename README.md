@@ -7,16 +7,17 @@
 Studi˚ v0.1.2 is currently undergoing real world test to see what is needed and what issues may exist. Usage without the desire to maintain Studi˚ is not recommended.
 
 
-## Quickstart
+## Getting started
 
 I. Download Studi˚-vvv
+
+Automated: [Slush-Studio](https://github.com/djfrsn/slush-studio)
 
 Git:
 
 ```sh
 mkdir studio && cd studio && git clone https://github.com/djfrsn/gulp-studio-vvv.git .
 ```
-Future Option: [Slush-Studio](https://github.com/djfrsn/slush-studio)
 
 II. Install dependencies
 
@@ -24,28 +25,27 @@ II. Install dependencies
 npm install
 ```
 
-III. Install [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV). Once installed clone a VVV project into your '/studio/' dir using:
+III. Install [Alison Barrett's VVV Site Wizard](https://github.com/aliso/vvv-site-wizard). The rest of this guide assumes you installed VVV Site Wizard to run from anywhere, otherwise you will need to define the path in the next step.
 
-```sh
-gulp vvv
-```
-
-IV. Install [Alison Barrett's VVV Site Wizard](https://github.com/aliso/vvv-site-wizard). The rest of this guide assumes you installed VVV Site Wizard to run from anywhere, otherwise you will need to define the path in the next step.
-
-V. Create your site using:
+IV. Create your site using:
 
 ```sh
 gulp createsite
 ```
-The name chosen will be the url served to the browser
+The site name chosen will be the url served to the browser and the site dir can be found in 'vvv/vagrant-local/www/'
 
-VI. Update the proxy in 'gulp/task/browsersync.js' to your chosen site name 
+V. Head to your 'vvv/vagrant-local/' dir and 
 
-VII. Run Studi˚ once your site is created
+```sh
+vagrant up
+```
+
+VI. Now launch the site
 
 ```sh
 gulp
 ```
+
 This compiles Studi˚ & launches browser-sync w/ 'yoursite.dev' as the default proxy. Vivy!
 
 Head to '~/vagrant-local/www/yoursite.dev' & start building!  
