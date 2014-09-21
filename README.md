@@ -66,14 +66,14 @@ to ensure task are stable.
 $ gulp paint
 ```
 
-Open your project in the browser w/ [browser-sync](http://www.browsersync.io/), then set a watch to live reload the browser when your html/php/sass/js files change. 
+Open your project in the browser through a proxy of the VVV server w/ [browser-sync](http://www.browsersync.io/), then sets a watch to live reload the browser when your php/sass/js files change. 
 
-Your app loads at 'http://localhost:3000' by default, & an external address is provided to access your app from multiple devices with features such as action & code sync provided by browser-sync.
+Your app loads at 'http://localhost:3000'/yoursite.dev by default, & an external browser-sync address is provided to access your app from multiple devices with features such as action & code sync.
 
 Compatible with PHP, ASP, Rails and more.
 
 #PHP
-+ Watch 'studio.dev' php for changes & reload w/ Browsersync
++ Watch 'yoursite.dev' php for changes & reload w/ Browsersync
 
 #### HTML 
 + Minify
