@@ -51,8 +51,13 @@ gulp.task('clone-studio-theme', function() {
     ]))
 });
 
+gulp.task('welcome', function () {
+        gulp.src(setup.root)
+            .pipe(notify('Welcome to Studi˚-VVV, vagrant up in your vagrant-local dir, then run gulp to get started'));
+});
+
 gulp.task('createsite', function(callback) {
         runSequence( 'vvv-site-wizard', 
-            [ 'castSpell', 'path-replace-site', 'path-replace-site-dir' ], 'clone-studio-theme',
+            [ 'castSpell', 'path-replace-site', 'path-replace-site-dir' ], 'clone-studio-theme', 'welcome',
           callback);
 });
