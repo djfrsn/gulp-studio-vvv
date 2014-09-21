@@ -5,8 +5,6 @@ gulp.task('paint', [ 'setWatch', 'browser-sync'], function () {
      	['styles']);
     gulp.watch([ sourced.php],
     	['php']);
-    gulp.watch([ sourced.includes, sourced.easel],
-    	['scaffold']);
     gulp.watch([ sourced.jsdir],
     	['brush']);
 });
