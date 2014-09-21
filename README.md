@@ -66,19 +66,15 @@ to ensure task are stable.
 $ gulp paint
 ```
 
-Open your project in the browser through a proxy of the VVV server w/ [browser-sync](http://www.browsersync.io/), then sets a watch to live reload the browser when your php/sass/js files change. 
+Opens your project in the browser through a proxy of the VVV server w/ [browser-sync](http://www.browsersync.io/), then sets a watch to live reload the browser when your php/sass/js files change. 
 
 Your app loads at 'http://localhost:3000'/yoursite.dev by default, & an external browser-sync address is provided to access your app from multiple devices with features such as action & code sync.
 
 Compatible with PHP, ASP, Rails and more.
 
-#PHP
+####PHP
 + Watch 'yoursite.dev' php for changes & reload w/ Browsersync
 
-#### HTML 
-+ Minify
-+ [file-includes](https://www.npmjs.org/package/gulp-file-include)
-+ H5BP
 
 #### CSS
 + SASS 
@@ -121,15 +117,15 @@ Run build versions of default task:
 
 ## Filesystem 
 
+#### PHP
+
+Custom WP theme titled studio for with this tool
+
 #### SASS
 
 app/lib/styles for all your styling needs
 
 app/lib/styles/critical/_modules/_critical.scss - Any css written here will be inlined in app/index.html after running 'gulp crit' or if _critical changes after running 'gulp paint'
-
-#### HTML 
-
-Include w/ @@include('included.html')
 
 #### Images
 
