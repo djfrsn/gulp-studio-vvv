@@ -26,7 +26,7 @@ gulp.task('vvv-site-wizard', function(){
         }));
 });
 gulp.task('movescript', function(){
-  return gulp.src(['autositesetup/'])
+  return gulp.src(['autositesetup/vvv'])
     .pipe(gulp.dest('vvv/vagrant-local/'));
 });
 
