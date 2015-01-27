@@ -9,3 +9,4 @@ npm-debug.log
 helper
 app/lib/js/brush/brush.js
 vvv
+.DS_Store

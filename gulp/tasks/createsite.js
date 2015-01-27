@@ -25,6 +25,11 @@ gulp.task('vvv-site-wizard', function(){
             site_dir = res.site_dir;
         }));
 });
+gulp.task('movescript', function(){
+  return gulp.src(['autositesetup/'])
+    .pipe(gulp.dest('vvv/vagrant-local/'));
+});
+
 gulp.task('path-replace-site', function(){
   return gulp.src(['gulp/tasks/browsersync.js'])
     .pipe(replace('site.dev', site))
@@ -40,7 +45,7 @@ gulp.task('path-replace-site', function(){
 gulp.task('castSpell', function() {
     return gulp.src(setup.root)
         .pipe(shell([
-      'cd vvv/vagrant-local/ && vvv -a create -n ' + site_dir + ' -d ' + site + ' -v 3.9.1 -x'
+      'cd vvv/vagrant-local/ && ./vvv -a create -n ' + site_dir + ' -d ' + site + ' -v 3.9.1 -x'
     ]))
 });
 
@@ -57,7 +62,7 @@ gulp.task('welcome', function () {
 });
 
 gulp.task('createsite', function(callback) {
-        runSequence( 'vvv-site-wizard', 
+        runSequence( 'vvv-site-wizard', 'movescript',
             [ 'castSpell', 'path-replace-site', 'path-replace-site-dir' ], 'clone-studio-theme', 'welcome',
           callback);
 });
